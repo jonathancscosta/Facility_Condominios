@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <template id="index">
+            <t t-foreach="bikes" t-as="bike">
+                <div class="bike">
+                    <img t-if="bike.imagem" t-att-src="'data:image/png;base64,%s' % bike.imagem"/>
+                    <h2><t t-esc="bike.name"/></h2>
+                    <p><t t-esc="bike.unidade"/></p>
+                    <p><t t-esc="bike.marca"/></p>
+                    <p><t t-esc="bike.modelo"/></p>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>

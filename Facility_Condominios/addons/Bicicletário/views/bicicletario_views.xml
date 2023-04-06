@@ -1,0 +1,46 @@
+<odoo>
+    <data>
+    <template id="assets_backend" name="bicicletario assets" inherit_id="web.assets_backend">
+    <xpath expr="." position="inside">
+        <script type="text/javascript" src="/bicicletario/static/src/js/bicicletario.js"></script>
+    </xpath>
+</template>
+
+        <record model="ir.ui.view" id="bike_form_view">
+            <field name="name">bicicletario.bike.form</field>
+            <field name="model">bicicletario.bike</field>
+            <field name="arch" type="xml">
+                <form string="Bike">
+                    <group>
+                        <field name="name"/>
+                        <field name="imagem" widget="image" class="oe_left oe_avatar"/>
+                        <field name="unidade"/>
+                        <field name="marca"/>
+                        <field name="modelo"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="bike_tree_view">
+            <field name="name">bicicletario.bike.tree</field>
+            <field name="model">bicicletario.bike</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="imagem" widget="image" class="oe_left oe_avatar"/>
+                    <field name="unidade"/>
+                    <field name="marca"/>
+                    <field name="modelo"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="bike_action">
+            <field name="name">Bikes</field>
+            <field name="res_model">bicicletario.bike</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="main_bicicletario_menu" name="Bicicletário" />
+        <menuitem id="bike_menu" name="Bikes" parent="main_bicicletario_menu" action="bike_action" />
+    </data>
+</odoo>

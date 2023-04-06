@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+],
+
+        <record model="bicicletario.bike" id="bike1">
+            <field name="name">Bike 1</field>
+            <field name="unidade">Unidade 1</field>
+            <field name="marca">Marca 1</field>
+            <field name="modelo">Modelo 1</field>
+            <field name="imagem">/static/img/bike1.jpg</field>
+        </record>
+        <record model="bicicletario.bike" id="bike2">
+            <field name="name">Bike 2</field>
+            <field name="unidade">Unidade 2</field>
+            <field name="marca">Marca 2</field>
+            <field name="modelo">Modelo 2</field>
+            <field name="imagem">/static/img/bike2.jpg</field>
+        </record>
+        <record model="bicicletario.bike" id="bike3">
+            <field name="name">Bike 3</field>
+            <field name="unidade">Unidade 3</field>
+            <field name="marca">Marca 3</field>
+            <field name="modelo">Modelo 3</field>
+            <field name="imagem">/static/img/bike3.jpg</field>
+        </record>
+    </data>
+</odoo>

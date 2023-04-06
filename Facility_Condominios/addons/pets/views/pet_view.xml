@@ -1,0 +1,41 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="pet_form_view">
+            <field name="name">pet.form</field>
+            <field name="model">pet</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="breed"/>
+                            <field name="birthdate"/>
+                            <field name="weight"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="pet_tree_view">
+            <field name="name">pet.tree</field>
+            <field name="model">pet</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="breed"/>
+                    <field name="birthdate"/>
+                    <field name="weight"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="pet_action">
+            <field name="name">Pets</field>
+            <field name="res_model">pet</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Pets" id="menu_pet" action="pet_action"/>
+    </data>
+</odoo>

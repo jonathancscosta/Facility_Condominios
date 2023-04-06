@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="module_pet" model="ir.module.module">
+            <field name="name">Pet</field>
+            <field name="description">Addon de gerenciamento de pets</field>
+            <field name="author">Jonathan Cesar Costa</field>
+            <field name="version">1.0</field>
+            <field name="license">AGPL-3</field>
+            <field name="application">True</field>
+            <field name="website"><https:/>
+            <localhost:8069></localhost:8069></field>
+            <field name="summary">Gerenciamento de pets</field>
+            <field name="category">Vertical/Animais de estimação</field>
+            <record id="model_pet_pet" model="ir.model">
+    <field name="name">Pet</field>
+    <field name="model">pet.pet</field>
+    <field name="state">manual</field>
+    <field name="inherit_id" ref="product.product_template_only_form_view"/>
+    <field name="arch" type="xml">
+        <form string="Pet" version="7.0">
+            <sheet>
+                <group>
+                    <group>
+                        <field name="name"/>
+                        <field name="breed"/>
+                    </group>
+                    <group>
+                        <field name="birthdate"/>
+                        <field name="weight"/>
+                    </group>
+                </group>
+            </sheet>
+        </form>
+    </field>
+</record>
+<record id="group_pet_user" model="res.groups">
+    <field name="name">Usuários do Pet</field>
+</record>
+
+<record id="group_pet_manager" model="res.groups">
+    <field name="name">Gerentes do Pet</field>
+    <field name="implied_ids" eval="[(4, ref('group_pet_user'))]"/>
+</record>
+
+<record id="rule_pet_user" model="ir.rule">
+    <field name="name">Regra do Usuário do Pet</field>
+    <field name="model_id" ref="model_pet_pet
+
+        </record>
+    </data>
+</odoo>
